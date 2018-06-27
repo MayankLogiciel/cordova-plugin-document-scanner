@@ -139,7 +139,7 @@ NS_CLASS_AVAILABLE(NA, 8_0)
  
  @return The current filtering type: IRLScannerViewType applied to the image on the camera.
  */
-@property (readonly, nonatomic) IRLScannerViewType                   cameraViewType;
+@property (readwrite, nonatomic) IRLScannerViewType                   cameraViewType;
 
 /**
  @brief Depending what you want, you can have either Fast or Accurate detection of borders
