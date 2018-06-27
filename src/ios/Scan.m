@@ -15,7 +15,10 @@
     IRLScannerViewController *scanner = [IRLScannerViewController standardCameraViewWithDelegate:self];
     scanner.showControls = YES;
     scanner.showAutoFocusWhiteRectangle = YES;
+    scanner.cameraViewType = IRLScannerViewTypeNormal;
     [[self topViewController] presentViewController:scanner animated:YES completion:nil];
+    [scanner.contrast_type setHidden:YES];
+    [scanner.detect_toggle setHidden:YES];
     
 //    Scanui* scanui = [[Scanui alloc] init];
 //    [scanui viewDidLoad];
