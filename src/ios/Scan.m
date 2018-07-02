@@ -50,11 +50,12 @@
         
         // [self.scannedImage setImage:page_image];
         
-        NSData *pngData = UIImagePNGRepresentation(page_image);
+        NSData *jpgData = UIImageJPEGRepresentation(page_image, 1);
         NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
         NSString *documentsPath = [paths objectAtIndex:0]; //Get the docs directory
-        NSString *filePath = [documentsPath stringByAppendingPathComponent:@"image.png"]; //Add the file name
-        [pngData writeToFile:filePath atomically:YES]; //Write the file
+        NSString *filePath = [documentsPath stringByAppendingPathComponent:@"jp-scan.jpg"]; //Add the file name
+        [jpgData writeToFile:filePath atomically:YES]; //Write the file
+
         //NSLog(@"%s","Page Snapped.222...");
         
         ////// One line code to save to photo library , but no way to obtain the file path //UIImageWriteToSavedPhotosAlbum(page_image, nil, nil, nil);
